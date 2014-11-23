@@ -1,6 +1,6 @@
 
 class Post
-  attr_accessor :file_location, :permalink, :creation_datetime_obj, :formatted_time, :content
+  attr_accessor :file_location, :permalink, :creation_datetime_obj, :formatted_time, :timestring, :content
 
   def create(new_post_name, post_type)
 
@@ -49,5 +49,9 @@ class Post
 
   def get_formatted_timestamp(datetime_object)
     datetime_object.strftime "%l:%M%P, %A, %b %d, %Y"
+  end
+
+  def get_timestring(datetime_object)
+    datetime_object.strftime "%Y-%m-%dT%H:%M:%S%z"
   end
 end 

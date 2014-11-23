@@ -19,7 +19,7 @@
             <div class="blog_post" id="<%= post.permalink %>">   
               
                 <div class="date">
-                  <a href="#<%= post.permalink %>"><%= post.formatted_time %></a>
+                  <a href="#<%= post.permalink %>"><time datetime="<%= post.timestring %>"><%= post.formatted_time %></time></a>
                 </div>
                 <div class="post_content">
                   <%= post.content %>

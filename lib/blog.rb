@@ -43,6 +43,7 @@ class Blog
       this_post.creation_datetime_obj = this_post.get_datetime_object(file_location)
 
       this_post.formatted_time = this_post.get_formatted_timestamp(this_post.creation_datetime_obj) #  .strftime "%l:%M%P, %A, %b %d, %Y"
+      this_post.timestring = this_post.get_timestring(this_post.creation_datetime_obj)
 
       while (line = file.gets)
         if this_post.content

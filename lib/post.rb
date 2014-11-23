@@ -44,7 +44,7 @@ class Post
 
   def get_datetime_object(file_location)
     # I just shove the full file_location into DateTime.parse, with a gsub for the time colons, and it works like magic
-    DateTime.parse(file_location.gsub('+', ':'))
+    Time.parse(file_location.gsub('+', ':')).in_timezone($my_timezone)
   end
 
   def get_formatted_timestamp(datetime_object)
